@@ -1,0 +1,53 @@
+--- Processing: subject4 ---
+Left foot MAE: 682.87 ms
+Right foot MAE: 1832.60 ms
+Average MAE: 1257.73 ms
+
+--- Processing: subject1 ---
+Left foot MAE: 579.76 ms
+Right foot MAE: 831.93 ms
+Average MAE: 705.85 ms
+
+--- Processing: subject3 ---
+Left foot MAE: 726.75 ms
+Right foot MAE: 1158.34 ms
+Average MAE: 942.55 ms
+
+--- Processing: subject8 ---
+Left foot MAE: 617.80 ms
+Right foot MAE: 805.43 ms
+Average MAE: 711.61 ms
+
+--- Processing: subject5 ---
+Left foot MAE: 622.44 ms
+Right foot MAE: 471.15 ms
+Average MAE: 546.80 ms
+
+--- Processing: subject6 ---
+Left foot MAE: 508.68 ms
+Right foot MAE: 530.15 ms
+Average MAE: 519.41 ms
+
+--- Processing: subject9 ---
+Left foot MAE: 421.12 ms
+Right foot MAE: 578.22 ms
+Average MAE: 499.67 ms
+
+--- Processing: subject2 ---
+Left foot MAE: 443.61 ms
+Right foot MAE: 970.03 ms
+Average MAE: 706.82 ms
+
+--- Processing: subject7 ---
+Left foot MAE: 528.10 ms
+Right foot MAE: 1487.80 ms
+Average MAE: 1007.95 ms
+
+--- Processing: subject10 ---
+Left foot MAE: 557.00 ms
+Right foot MAE: 1500.48 ms
+Average MAE: 1028.74 ms
+
+
+================ Final Results ================
+Overall Subject Contact Time MAE: 792.71 ms
