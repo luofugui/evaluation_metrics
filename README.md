@@ -21,6 +21,8 @@ Run the evaluation script from the project root directory:
 **Output:**
 This command will process all test subjects and generate serialized pickle files containing the raw tensors (e.g., `subject1_output.pkl`) in your designated `Results/.../eval/output/` directory.
 
+> 💾 **Pre-computed Predictions Download:** > For convenience, all generated prediction files have been uploaded to Google Drive. You can directly view and download the raw output data here: **[Google Drive Folder: Predicted Footstep Files](https://drive.google.com/drive/folders/1NVadcsqwK_O9WBfJFmhMlzMsK5cNHZOC?usp=sharing)**
+
 ## 3. Computing the Contact Time MAE (`compute_mae.py`)
 Because raw frame-by-frame differencing does not accurately reflect step-level duration errors, we designed a custom evaluation script `compute_mae.py` to handle event extraction and temporal matching.
 
@@ -56,10 +58,4 @@ To better understand the distribution of errors and the impact of visual occlusi
 
 <div align="center">
   <img src="contact_errors_distribution.png" alt="Distribution of Contact Time Absolute Errors" width="800" />
-  <p><em>Figure: Distribution of Contact Time Absolute Errors by Subject and Foot</em></p>
-</div>
-
-**Key Observations & Conclusions:**
-* **Quantitative Baseline:** As recorded in `summary_average_mae.txt`, the overall average Contact Time MAE across all subjects is approximately **~792 ms**. This high average error establishes a clear quantitative baseline demonstrating the limitations of a vision-only approach.
-* **Impact of Occlusion:** While the interquartile range for unobstructed steps remains relatively low (typically under 500 ms), severe outlier errors (exceeding 2000-4000 ms) frequently occur.
-* **Asymmetric Failure:** The extreme variance between the left and right foot for specific subjects (e.g., Subject 4, 7, 10) strongly suggests that **severe visual occlusion completely degrades temporal accuracy**. When one leg blocks the other from the camera's perspective, the pure RGB/Skeleton model loses its ability to localize contact events accurately.
+  <p><em>Figure: Distribution of Contact
