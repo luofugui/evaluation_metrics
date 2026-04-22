@@ -37,7 +37,7 @@ Ensure the `pkl_files` glob path in the script matches your actual result direct
 
 ### Outputs Generated
 Running the script will automatically generate two files in the current directory:
-* `summary_average_mae.txt`: A clean text log containing the macro-average MAE for the left foot, right foot, and the overall average across all subjects.
+* `summary_average_mae.txt`: A clean text log containing the calculated macro-average MAE for the left foot, right foot, and the overall grand average across all subjects. **(Refer to this file for the exact ~792 ms derivation).**
 * `all_contact_errors.csv`: A highly detailed CSV file logging the exact error (in ms) for *every single matched step* for each foot of each subject. 
 
 ## 4. Results & Visualization (`analyze_errors.py`)
@@ -59,6 +59,7 @@ To better understand the distribution of errors and the impact of visual occlusi
   <p><em>Figure: Distribution of Contact Time Absolute Errors by Subject and Foot</em></p>
 </div>
 
-**Key Observations:**
-* While the interquartile range for unobstructed steps remains relatively low, severe outlier errors (exceeding 2000-4000 ms) frequently occur.
-* The extreme variance between the left and right foot for specific subjects (e.g., Subject 4, 7, 10) strongly suggests that **severe visual occlusion completely degrades temporal accuracy** in vision-only models.
+**Key Observations & Conclusions:**
+* **Quantitative Baseline:** As recorded in `summary_average_mae.txt`, the overall average Contact Time MAE across all subjects is approximately **~792 ms**. This high average error establishes a clear quantitative baseline demonstrating the limitations of a vision-only approach.
+* **Impact of Occlusion:** While the interquartile range for unobstructed steps remains relatively low (typically under 500 ms), severe outlier errors (exceeding 2000-4000 ms) frequently occur.
+* **Asymmetric Failure:** The extreme variance between the left and right foot for specific subjects (e.g., Subject 4, 7, 10) strongly suggests that **severe visual occlusion completely degrades temporal accuracy**. When one leg blocks the other from the camera's perspective, the pure RGB/Skeleton model loses its ability to localize contact events accurately.
